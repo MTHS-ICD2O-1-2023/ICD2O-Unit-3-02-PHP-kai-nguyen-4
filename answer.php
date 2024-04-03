@@ -33,38 +33,16 @@
       <div class="right-image">
         <img src="./images/pyramid.png" alt="pyramid image" />
       </div>
-      <div class="page-content">Formula: (L * W * H) / 3</div>
-      <form action="answer.php" method="POST">
-        <p>Length</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" name="length" step=".01" />
-          <label class="mdl-textfield__label" for="length-entered"> Length (mm) ...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-        <!-- Numeric Textfield -->
-        <p>Width</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" name="width" step=".01" />
-          <label class="mdl-textfield__label" for="width-entered"> Width (mm) ...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-        <p>Height</p>
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" name="height" step=".01" />
-          <label class="mdl-textfield__label" for="height-entered">Height (mm) ...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-        <br />
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-          Enter
-        </button>
-      </form>
-      <br />
-      <br />
-      <div class="page-content-answer">
-        <div id="answer"></div>
+      <div class="page-content">
+        <?php
+        $length = $_POST["length"];
+        $width = $_POST["width"];
+        $height = $_POST["height"];
+        echo "The volume is: " . ($length * $width * $height) / 3 . " mm<sup>3"
+        ?>
       </div>
-    </main>
+  </div>
+  </main>
   </div>
 </body>
 
