@@ -38,7 +38,8 @@
         $length = $_POST["length"];
         $width = $_POST["width"];
         $height = $_POST["height"];
-        echo "The volume is: " . ($length * $width * $height) / 3 . " mm<sup>3"
+        $volume = ($length * $width * $height) / 3;
+        echo "If the length was " . $length . ", the width was " . $width . " and the height was " . $height . "<br />The volume is: " . $volume . " mm<sup>3"
         ?>
       </div>
   </div>
